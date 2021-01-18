@@ -2,12 +2,13 @@ let lastOperand = 0;
 let operation = null;
 
 const inputWindow = document.getElementById('inputWindow');
+inputWindow.value = '0';
 
 
 document.getElementById('btn_clr').addEventListener('click', function () {
     lastOperand = 0;
     operation = null;
-    inputWindow.value = '';
+    inputWindow.value = '0';
 })
 
 document.getElementById('btn_sqr').addEventListener('click', function () {
@@ -23,19 +24,19 @@ document.getElementById('btn_plus').addEventListener('click', function () {
 })
 
 document.getElementById('btn_minus').addEventListener('click', function () {
-    lastOperand = parseInt(inputWindow.value);
+    lastOperand = parseFloat(inputWindow.value);
     operation = 'minus';
     inputWindow.value = '';
 })
 
 document.getElementById('btn_umn').addEventListener('click', function () {
-    lastOperand = parseInt(inputWindow.value);
+    lastOperand = parseFloat(inputWindow.value);
     operation = 'umn';
     inputWindow.value = '';
 })
 
 document.getElementById('btn_del').addEventListener('click', function () {
-    lastOperand = parseInt(inputWindow.value);
+    lastOperand = parseFloat(inputWindow.value);
     operation = 'del';
     inputWindow.value = '';
 })
@@ -70,7 +71,6 @@ document.getElementById('btn_res').addEventListener('click', function () {
 
 document.getElementById('btn_dot').addEventListener('click', function () {
     inputWindow.value += '.';
-
 })
 
 document.getElementById('btn_1').addEventListener('click', function () {
